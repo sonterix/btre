@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +6,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- LightBox -->
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <title>BT</title>
 </head>
 
 <body>
+    <!-- Header -->
+    {% include 'partials/_header.html' %}
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
 
+    <!-- Content -->
     {% block content %}{% endblock %}
 
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <!-- JQuery -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- LightBox -->
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
