@@ -116,3 +116,6 @@ dmypy.json
 
 # Virtual environment
 venv
+
+# Visual Code settings
+.vscode
